@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试</title>
+
+    <script type="text/javascript" src="http://d3js.org/d3.v5.min.js">
+    </script>
+
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=utf-8">
+
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+</head>
+
+<body>
+    <h1>测试</h1>
+    <svg width="860" height="560"></svg>
+
+    <script>
+
+        var graph = new Array();
+        /*d3.json('./static/data/link.json', function (error, data) {
+            graph.push(data);
+            console.log(data)
+
+        });*/
+        d3.csv('./static/data/demodata.csv').then(function (d) {
+            graph.push(d);
+            
+        });
+        console.log(graph);
+
+    </script>
+</body>
+</html>
